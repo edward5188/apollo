@@ -307,7 +307,7 @@ CREATE TABLE `Authorities` (
 # ------------------------------------------------------------
 INSERT INTO `ServerConfig` (`Key`, `Value`, `Comment`)
 VALUES
-    ('apollo.portal.envs', 'dev, fat, uat, pro', '可支持的环境列表'),
+    ('apollo.portal.envs', 'dev, sit, uat, pre, pro', '可支持的环境列表'),
     ('organizations', '[{\"orgId\":\"TEST1\",\"orgName\":\"样例部门1\"},{\"orgId\":\"TEST2\",\"orgName\":\"样例部门2\"}]', '部门列表'),
     ('superAdmin', 'apollo', 'Portal超级管理员'),
     ('api.readTimeout', '10000', 'http接口read timeout'),

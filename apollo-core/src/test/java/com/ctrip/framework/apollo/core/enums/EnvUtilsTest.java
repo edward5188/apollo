@@ -1,15 +1,15 @@
 package com.ctrip.framework.apollo.core.enums;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class EnvUtilsTest {
 
   @Test
   public void testTransformEnv() throws Exception {
     assertEquals(Env.DEV, EnvUtils.transformEnv(Env.DEV.name()));
-    assertEquals(Env.FAT, EnvUtils.transformEnv(Env.FAT.name().toLowerCase()));
+    assertEquals(Env.SIT, EnvUtils.transformEnv(Env.SIT.name().toLowerCase()));
     assertEquals(Env.UAT, EnvUtils.transformEnv(" " + Env.UAT.name().toUpperCase() + ""));
     assertEquals(Env.UNKNOWN, EnvUtils.transformEnv("someInvalidEnv"));
   }
@@ -17,7 +17,7 @@ public class EnvUtilsTest {
   @Test
   public void testFromString() throws Exception {
     assertEquals(Env.DEV, Env.fromString(Env.DEV.name()));
-    assertEquals(Env.FAT, Env.fromString(Env.FAT.name().toLowerCase()));
+    assertEquals(Env.SIT, Env.fromString(Env.SIT.name().toLowerCase()));
     assertEquals(Env.UAT, Env.fromString(" " + Env.UAT.name().toUpperCase() + ""));
   }
 

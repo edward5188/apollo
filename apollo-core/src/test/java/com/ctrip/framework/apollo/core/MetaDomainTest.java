@@ -1,17 +1,18 @@
 package com.ctrip.framework.apollo.core;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 import com.ctrip.framework.apollo.BaseIntegrationTest;
 import com.ctrip.framework.apollo.core.enums.Env;
 import com.ctrip.framework.apollo.core.internals.LegacyMetaServerProvider;
 import com.ctrip.framework.apollo.core.spi.MetaServerProvider;
 import com.google.common.collect.Maps;
-import java.util.Map;
-import javax.servlet.http.HttpServletResponse;
 import org.junit.After;
 import org.junit.Test;
+
+import javax.servlet.http.HttpServletResponse;
+import java.util.Map;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class MetaDomainTest extends BaseIntegrationTest {
 
@@ -37,10 +38,10 @@ public class MetaDomainTest extends BaseIntegrationTest {
     String validServer = " http://localhost:" + PORT + " ";
     String invalidServer = "http://localhost:" + findFreePort();
 
-    MockMetaServerProvider.mock(Env.FAT, validServer + "," + invalidServer);
+    MockMetaServerProvider.mock(Env.SIT, validServer + "," + invalidServer);
     MockMetaServerProvider.mock(Env.UAT, invalidServer + "," + validServer);
 
-    assertEquals(validServer.trim(), MetaDomainConsts.getDomain(Env.FAT));
+    assertEquals(validServer.trim(), MetaDomainConsts.getDomain(Env.SIT));
     assertEquals(validServer.trim(), MetaDomainConsts.getDomain(Env.UAT));
   }
 
@@ -49,9 +50,9 @@ public class MetaDomainTest extends BaseIntegrationTest {
     String invalidServer = "http://localhost:" + findFreePort() + " ";
     String anotherInvalidServer = "http://localhost:" + findFreePort() + " ";
 
-    MockMetaServerProvider.mock(Env.LPT, invalidServer + "," + anotherInvalidServer);
+    MockMetaServerProvider.mock(Env.PRE, invalidServer + "," + anotherInvalidServer);
 
-    String metaServer = MetaDomainConsts.getDomain(Env.LPT);
+    String metaServer = MetaDomainConsts.getDomain(Env.PRE);
 
     assertTrue(metaServer.equals(invalidServer.trim()) || metaServer.equals(anotherInvalidServer.trim()));
   }

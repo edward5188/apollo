@@ -3,6 +3,12 @@ spring:
     name: apollo-portal
   profiles:
     active: ${apollo_profile}
+
+  datasource:
+    url: jdbc:mysql://${mysql_host}:${mysql_port:3306}/${mysql_name}?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=false
+    username: ${mysql_username}
+    password: ${mysql_password}
+
   jpa:
     properties:
       hibernate:
@@ -17,7 +23,7 @@ server:
     use-relative-redirects: true
 
 logging:
-  file: /opt/logs/100003173/apollo-portal.log
+  file: logs/apollo-portal.log
 
 management:
   health:

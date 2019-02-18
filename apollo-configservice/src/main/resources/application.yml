@@ -4,6 +4,11 @@ spring:
   profiles:
     active: ${apollo_profile}
 
+  datasource:
+    url: jdbc:mysql://${mysql_host}:${mysql_port:3306}/${mysql_name}?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=false
+    username: ${mysql_username}
+    password: ${mysql_password}
+
 ctrip:
   appid: 100003171
   
@@ -11,4 +16,4 @@ server:
   port: 8080
 
 logging:
-  file: /opt/logs/100003171/apollo-configservice.log
+  file: logs/apollo-configservice.log

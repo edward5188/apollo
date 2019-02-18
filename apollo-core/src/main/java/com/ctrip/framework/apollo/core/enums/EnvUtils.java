@@ -9,16 +9,15 @@ public final class EnvUtils {
       return Env.UNKNOWN;
     }
     switch (envName.trim().toUpperCase()) {
-      case "LPT":
-        return Env.LPT;
-      case "FAT":
-      case "FWS":
-        return Env.FAT;
+      case "PRO":
+//      case "PROD": //just in case
+        return Env.PRO;
+      case "PRE":
+        return Env.PRE;
       case "UAT":
         return Env.UAT;
-      case "PRO":
-      case "PROD": //just in case
-        return Env.PRO;
+      case "SIT":
+        return Env.SIT;
       case "DEV":
         return Env.DEV;
       case "LOCAL":
