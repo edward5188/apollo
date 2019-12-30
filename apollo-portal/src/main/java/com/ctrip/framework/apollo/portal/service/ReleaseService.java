@@ -126,9 +126,8 @@ public class ReleaseService {
     List<ReleaseDTO> releases = findReleaseByIds(env, releaseIds);
     if (CollectionUtils.isEmpty(releases)) {
       return null;
-    } else {
-      return releases.get(0);
     }
+    return releases.get(0);
 
   }
 
@@ -140,8 +139,8 @@ public class ReleaseService {
     return releaseAPI.loadLatestRelease(appId, env, clusterName, namespaceName);
   }
 
-  public void rollback(Env env, long releaseId) {
-    releaseAPI.rollback(env, releaseId, userInfoHolder.getUser().getUserId());
+  public void rollback(Env env, long releaseId, String operator) {
+    releaseAPI.rollback(env, releaseId, operator);
   }
 
   public ReleaseCompareResult compare(Env env, long baseReleaseId, long toCompareReleaseId) {

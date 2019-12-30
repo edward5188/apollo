@@ -23,7 +23,7 @@ public class DefaultApplicationProvider implements ApplicationProvider {
   @Override
   public void initialize() {
     try {
-      InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream(APP_PROPERTIES_CLASSPATH);
+      InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream(APP_PROPERTIES_CLASSPATH.substring(1));
       if (in == null) {
         in = DefaultApplicationProvider.class.getResourceAsStream(APP_PROPERTIES_CLASSPATH);
       }
@@ -66,10 +66,9 @@ public class DefaultApplicationProvider implements ApplicationProvider {
     if ("app.id".equals(name)) {
       String val = getAppId();
       return val == null ? defaultValue : val;
-    } else {
-      String val = m_appProperties.getProperty(name, defaultValue);
-      return val == null ? defaultValue : val;
     }
+    String val = m_appProperties.getProperty(name, defaultValue);
+    return val == null ? defaultValue : val;
   }
 
   @Override

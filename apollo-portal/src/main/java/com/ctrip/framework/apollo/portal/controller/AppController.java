@@ -75,19 +75,17 @@ public class AppController {
   public List<App> findApps(@RequestParam(value = "appIds", required = false) String appIds) {
     if (StringUtils.isEmpty(appIds)) {
       return appService.findAll();
-    } else {
-      return appService.findByAppIds(Sets.newHashSet(appIds.split(",")));
     }
+    return appService.findByAppIds(Sets.newHashSet(appIds.split(",")));
   }
 
-  @GetMapping("/search")
+  @GetMapping("/search/by-appid-or-name")
   public PageDTO<App> searchByAppIdOrAppName(@RequestParam(value = "query", required = false) String query,
       Pageable pageable) {
     if (StringUtils.isEmpty(query)) {
       return appService.findAll(pageable);
-    } else {
-      return appService.searchByAppIdOrAppName(query, pageable);
     }
+    return appService.searchByAppIdOrAppName(query, pageable);
   }
 
   @GetMapping("/by-owner")
@@ -107,6 +105,7 @@ public class AppController {
     return appService.findByAppIds(appIds, page);
   }
 
+  @PreAuthorize(value = "@permissionValidator.hasCreateApplicationPermission()")
   @PostMapping
   public App create(@Valid @RequestBody AppModel appModel) {
 

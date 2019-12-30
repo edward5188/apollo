@@ -26,8 +26,10 @@ Java客户端不依赖任何框架，能够运行于所有Java运行时环境，
 本地快速部署请参见[Quick Start](https://github.com/ctripcorp/apollo/wiki/Quick-Start)
 
 演示环境（Demo）:
-- [106.12.25.204:8070](http://106.12.25.204:8070/)
+- [106.54.227.205](http://106.54.227.205/)
 - 账号/密码:apollo/admin
+
+> 如访问github速度缓慢，可以访问[gitee镜像](https://gitee.com/nobodyiam/apollo)，不定期同步
 
 # Screenshots
 ![配置界面](https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/apollo-home-screenshot.png)
@@ -37,6 +39,7 @@ Java客户端不依赖任何框架，能够运行于所有Java运行时环境，
   * Apollo提供了一个统一界面集中式管理不同环境（environment）、不同集群（cluster）、不同命名空间（namespace）的配置。
   * 同一份代码部署在不同的集群，可以有不同的配置，比如zk的地址等
   * 通过命名空间（namespace）可以很方便的支持多个不同应用共享同一份配置，同时还允许应用对共享的配置进行覆盖
+  * 配置界面支持多语言（中文，English）
 
 * **配置修改实时生效（热发布）**
   * 用户在Apollo修改完配置并发布后，客户端能实时（1秒）接收到最新的配置，并通知到应用程序。
@@ -115,17 +118,19 @@ Java客户端不依赖任何框架，能够运行于所有Java运行时环境，
 # Support
 <table>
   <thead>
-    <th>Apollo技术支持④群<br />群号：516773934 </th>
+    <th>Apollo技术支持⑤群<br />群号：914839843（未满）</th>
+    <th>Apollo技术支持④群<br />群号：516773934（已满）</th>
     <th>Apollo技术支持③群<br />群号：742035428（已满）</th>
     <th>Apollo技术支持②群<br />群号：904287263（已满）</th>
     <th>Apollo技术支持①群<br />群号：375526581（已满）</th>
   </thead>
   <tbody>
     <tr>
-      <td><img src="https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/tech-support-qq-4.png" alt="tech-support-qq-4"></td>
-      <td><img src="https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/tech-support-qq-3.png" alt="tech-support-qq-3"></td>
-      <td><img src="https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/tech-support-qq-2.png" alt="tech-support-qq-2"></td>
-      <td><img src="https://raw.githubusercontent.com/ctripcorp/apollo/master/doc/images/tech-support-qq-1.png" alt="tech-support-qq-1"></td>
+      <td><img src="https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/tech-support/tech-support-qq-5.png" alt="tech-support-qq-5"></td>
+      <td><img src="https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/tech-support/tech-support-qq-4.png" alt="tech-support-qq-4"></td>
+      <td><img src="https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/tech-support/tech-support-qq-3.png" alt="tech-support-qq-3"></td>
+      <td><img src="https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/tech-support/tech-support-qq-2.png" alt="tech-support-qq-2"></td>
+      <td><img src="https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/tech-support/tech-support-qq-1.png" alt="tech-support-qq-1"></td>
     </tr>
   </tbody>
 </table>
@@ -315,6 +320,53 @@ The project is licensed under the [Apache 2 license](https://github.com/ctripcor
 ![云幂信息技术](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/insyunmi.png) 
 ![兑吧](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/duiba.png) 
 ![九机网](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/9ji.png) 
+![随手科技](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/sui.png) 
+![万谷盛世](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/aixiangdao.png) 
+![云账房](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/yunzhangfang.png) 
+![浙江远图互联](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/yuantutech.png) 
+![青客公寓](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/qk365.png) 
+![东方财富](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/eastmoney.png) 
+![极客修](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/jikexiu.png) 
+![美市科技](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/meix.png) 
+![中通快递](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/zto.png) 
+![易流科技](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/e6yun.png) 
+![实习僧](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/xiaoyuanzhao.png) 
+![达令家](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/dalingjia.png) 
+![寺库](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/secoo.png) 
+![连连支付](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/lianlianpay.png) 
+![众安保险](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/zhongan.png) 
+![360金融](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/360jinrong.png) 
+![中航服商旅](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/caschina.png) 
+![贝壳](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/ke.png) 
+![Yeahmobi易点天下](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/yeahmobi.png) 
+![北京登云美业网络科技有限公司](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/idengyun.png) 
+![金和网络](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/jinher.png) 
+![中移（杭州）信息技术有限公司](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/komect.png) 
+![北森](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/beisen.png) 
+![合肥维天运通](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/log56.png) 
+![北京蜜步科技有限公司](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/meboth.png) 
+![术康](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/postop.png) 
+![富力集团](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/rfchina.png) 
+![天府行](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/tfxing.png) 
+![八商山](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/8travelpay.png) 
+![中原地产](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/centaline.png) 
+![智科云达](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/zkyda.png) 
+![中原730](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/house730.png) 
+![百果园](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/pagoda.png) 
+![波罗蜜](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/bolome.png) 
+![Xignite](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/xignite.png) 
+![杭州有云科技有限公司](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/aduer.png) 
+![成都书声科技有限公司](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/jojoreading.png) 
+![斯维登集团](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/sweetome.png) 
+![广东快乐种子科技有限公司](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/vipthink.png) 
+![上海盈翼文化传播有限公司](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/tongxuecool.png) 
+![上海尚诚消费金融股份有限公司](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/sccfc.png) 
+![自如网](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/ziroom.png) 
+![京东](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/jd.png) 
+![兔展智能](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/rabbitpre.png) 
+![竹贝](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/zhubei.png) 
+![iMile(中东)](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/imile.png) 
+![哈罗出行](https://raw.githubusercontent.com/ctripcorp/apollo-community/master/images/known-users/helloglobal.png) 
 
 # Awards
 
