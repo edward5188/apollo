@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class TitanSettings {
 
-  @Value("${fat.titan.url:}")
-  private String fatTitanUrl;
+  @Value("${sit.titan.url:}")
+  private String sitTitanUrl;
 
   @Value("${uat.titan.url:}")
   private String uatTitanUrl;
@@ -19,8 +19,8 @@ public class TitanSettings {
   @Value("${pro.titan.url:}")
   private String proTitanUrl;
 
-  @Value("${fat.titan.dbname:}")
-  private String fatTitanDbname;
+  @Value("${sit.titan.dbname:}")
+  private String sitTitanDbname;
 
   @Value("${uat.titan.dbname:}")
   private String uatTitanDbname;
@@ -31,9 +31,8 @@ public class TitanSettings {
   public String getTitanUrl() {
     Env env = EnvUtils.transformEnv(Foundation.server().getEnvType());
     switch (env) {
-      case FAT:
-      case FWS:
-        return fatTitanUrl;
+      case SIT:
+        return sitTitanUrl;
       case UAT:
         return uatTitanUrl;
       case TOOLS:
@@ -47,9 +46,8 @@ public class TitanSettings {
   public String getTitanDbname() {
     Env env = EnvUtils.transformEnv(Foundation.server().getEnvType());
     switch (env) {
-      case FAT:
-      case FWS:
-        return fatTitanDbname;
+      case SIT:
+        return sitTitanDbname;
       case UAT:
         return uatTitanDbname;
       case TOOLS:

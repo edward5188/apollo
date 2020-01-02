@@ -42,7 +42,7 @@ public class PortalConfig extends RefreshableConfig {
    * Level: important
    **/
   public List<Env> portalSupportedEnvs() {
-    String[] configurations = getArrayProperty("apollo.portal.envs", new String[]{"FAT", "UAT", "PRO"});
+    String[] configurations = getArrayProperty("apollo.portal.envs", new String[]{"SIT", "UAT", "PRO"});
     List<Env> envs = Lists.newLinkedList();
 
     for (String env : configurations) {
