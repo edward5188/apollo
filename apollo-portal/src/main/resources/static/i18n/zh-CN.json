@@ -76,7 +76,7 @@
   "Component.Namespace.Branch.AllPublish": "全量发布",
   "Component.Namespace.Branch.DiscardGrayscaleVesion": "废弃灰度版本",
   "Component.Namespace.Branch.DiscardGrayscale": "放弃灰度",
-  "Component.Namespace.Branch.NoPermissionTips": "您不是该项目的管理员，也没有该Namespace的编辑或发布权限，无法查看配置信息。",
+  "Component.Namespace.Branch.NoPermissionTips": "您不是该项目的管理员，也没有该Namespace的编辑或发布权限，无法配置信息。",
   "Component.Namespace.Branch.Tab.Configuration": "配置",
   "Component.Namespace.Branch.Tab.GrayscaleRule": "灰度规则",
   "Component.Namespace.Branch.Tab.GrayscaleInstance": "灰度实例列表",
