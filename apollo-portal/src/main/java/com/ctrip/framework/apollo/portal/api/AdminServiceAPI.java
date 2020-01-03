@@ -16,11 +16,6 @@ import com.ctrip.framework.apollo.common.dto.ReleaseDTO;
 import com.ctrip.framework.apollo.common.dto.ReleaseHistoryDTO;
 import com.ctrip.framework.apollo.core.enums.Env;
 import com.google.common.base.Joiner;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
@@ -31,6 +26,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.HttpClientErrorException;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 
 @Service
@@ -153,10 +155,15 @@ public class AdminServiceAPI {
   public static class ItemAPI extends API {
 
     public List<ItemDTO> findItems(String appId, Env env, String clusterName, String namespaceName) {
-      ItemDTO[] itemDTOs =
-          restTemplate.get(env, "apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/items",
-              ItemDTO[].class, appId, clusterName, namespaceName);
-      return Arrays.asList(itemDTOs);
+      try{
+        // TODO 1.4.0 兼容性处理
+        ItemDTO[] itemDTOs =
+                restTemplate.get(env, "apps/{appId}/clusters/{clusterName}/namespaces/{namespaceName}/items",
+                        ItemDTO[].class, appId, clusterName, namespaceName);
+        return Arrays.asList(itemDTOs);
+      }catch (HttpClientErrorException e){
+        return Collections.emptyList();
+      }
     }
 
     public List<ItemDTO> findDeletedItems(String appId, Env env, String clusterName, String namespaceName) {
